@@ -3,7 +3,7 @@ const INFO = {
 		title: "MB.Portfolio",
 		name: "Mahdi Boudaouara",
 		email: "mahdi.boudaouara@supcom.tn",
-		logo: "./logo.png",
+		logo: "./portfolio/logo.png",
 	},
 
 	socials: {
@@ -37,7 +37,7 @@ const INFO = {
 			title: "Auction website with DevOps approach",
 			description:
 				"Developed a microservices-based auction website. Implemented automated CI/CD pipelines on Jenkins. Created Helm charts. Utilized ingress and nginx to expose the microservices to external traffic. Utilized jUnit and Selenium for automated testing, Used Prometheus & Grafana for monitoring.",
-			logo: "./cs.png",
+			logo: "./portfolio/cs.png",
 			linkText: "View Project",
 			link: "https://github.com/Mahdiboudaouara",
 		},
@@ -46,7 +46,7 @@ const INFO = {
 			title: "Neurodata",
 			description:
 				"A website for a startup, worked on it with a team of 4 as a backend developper.",
-			logo: "../neurodata.png",
+			logo: "./portfolio/neurodata.png",
 			linkText: "View Project",
 			link: "https://neurodata.tech/en/industries",
 		},
@@ -55,7 +55,7 @@ const INFO = {
 			title: "IHEC Project",
 			description:
 				"A file management project, worked on it as a chef for team of 4 , this project was made for students from IHEC carthage",
-			logo: "./ihec.png",
+			logo: "./portfolio/ihec.png",
 			linkText: "View Project",
 			link: "https://github.com/Mahdiboudaouara",
 		},
