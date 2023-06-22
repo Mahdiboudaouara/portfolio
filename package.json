@@ -1,12 +1,12 @@
 {
-	"homepage": "https://Mahdiboudaouara.github.io/portfolio",
+	"homepage": "https://Mahdiboudaouara.github.io/portfolio/",
 	"name": "reactfolio",
 	"version": "1.1.0",
 	"description": "Personal portfolio template built using Reactjs",
 	"author": {
-		"name": "Tharindu N. Madhusanka",
-		"email": "mail@tharindu.dev",
-		"url": "https://tharindu.dev"
+		"name": "Mahdi Boudaouara",
+		"email": "mahdi.boudaouara@supcom.tn",
+		"url": "https://Mahdiboudaouara.github.io/portfolio/"
 	},
 	"license": "MIT",
 	"private": true,
