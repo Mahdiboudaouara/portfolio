@@ -17,9 +17,12 @@ function article_1() {
 				}
 
 				.randImage {
-					align-self: center;
 					outline: 2px solid red;
 				}
+				.responsive {
+					width: 100%;
+					height: auto;
+				  }
 				`,
 		body: (
 			<React.Fragment>
@@ -30,7 +33,8 @@ function article_1() {
 					You'll need at least two servers with at least 2GB in memory
 					and 2 CPU cores. We'll use one as a master node and the
 					other as a worker node (I’m using Linode: they give you $100
-					for the first two months when signing up via this link &nbsp;
+					for the first two months when signing up via this link
+					&nbsp;
 					<a
 						href="https://www.linode.com/lp/free-credit-100/"
 						target="_blank"
@@ -48,21 +52,27 @@ function article_1() {
 							You MUST disable swap in order for the kubelet to
 							work properly.
 						</p>
-						<pre>
-							<code>$ sudo swapoff -a (on both servers)</code>
-						</pre>
+						<code>$ sudo swapoff -a (on both servers)</code>
 					</li>
 					<li>
 						<strong>
 							Create a firewall and Edit inbound rules:
 						</strong>
 						<p>
-							You can find the inbound rules inside the kubernetes documentation. Then you can associate the
-							firewall to the appropriate node.
+							You can find the inbound rules inside the kubernetes
+							documentation. Then you can associate the firewall
+							to the appropriate node.
 						</p>
-						<img src={image1Url} alt="Firewall Setup" />
-						<img src={image2Url} alt="Firewall Setup" />
-						
+						<img
+							className="randImage responsive"
+							src={image1Url}
+							alt="Firewall Setup"
+						/>
+						<img
+							className="randImage responsive"
+							src={image2Url}
+							alt="Firewall Setup"
+						/>
 					</li>
 					<li>
 						<strong>Change Hostnames (Optional):</strong>
@@ -70,9 +80,7 @@ function article_1() {
 							It’s recommended to change hostnames for the
 							servers, for example:
 						</p>
-						<pre>
-							<code>$ sudo hostnamectl set-hostname master</code>
-						</pre>
+						<code>$ sudo hostnamectl set-hostname master</code>
 					</li>
 					<li>
 						<strong>Install Kubernetes Components:</strong>
@@ -82,33 +90,31 @@ function article_1() {
 							check the service like this to know if it’s working
 							fine.
 						</p>
-						
-						<pre>
-							<code>$ service kubelet status</code>
-						</pre>
-						<img src={image3Url} alt="Kubernetes Components" />
+
+						<code>$ service kubelet status</code>
+						<img
+							className="randImage responsive"
+							src={image3Url}
+							alt="Kubernetes Components"
+						/>
 					</li>
 					<li>
 						<strong>Initialize Master Node:</strong>
 						<p>On the master only:</p>
-						<pre>
-							<code>
-								$ rm /etc/containerd/config.toml $ systemctl
-								restart containerd $ kubeadm init
-								--apiserver-advertise-address=10.x.x.x *private
-								address of the master node
-							</code>
-						</pre>
+						<code>
+							$ rm /etc/containerd/config.toml $ systemctl restart
+							containerd $ kubeadm init
+							--apiserver-advertise-address=10.x.x.x *private
+							address of the master node
+						</code>
 						<p>
 							Afterward, you can see if everything is working fine
 							using:
 						</p>
-						<pre>
-							<code>
-								$ sudo kubectl get node --kubeconfig
-								/etc/kubernetes/admin.conf
-							</code>
-						</pre>
+						<code>
+							$ sudo kubectl get node --kubeconfig
+							/etc/kubernetes/admin.conf
+						</code>
 						<p>
 							In case of an error (can happen when using a Ubuntu
 							version that's greater than 21.04 with cgroupv2
@@ -140,20 +146,16 @@ function article_1() {
 							basically making kubectl work for your non-root
 							user.
 						</p>
-						<pre>
-							<code>
-								mkdir -p $HOME/.kube sudo cp -i
-								/etc/kubernetes/admin.conf $HOME/.kube/config
-								sudo chown $(id -u):$(id -g) $HOME/.kube/config
-							</code>
-						</pre>
+						<code>
+							mkdir -p $HOME/.kube sudo cp -i
+							/etc/kubernetes/admin.conf $HOME/.kube/config sudo
+							chown $(id -u):$(id -g) $HOME/.kube/config
+						</code>
 					</li>
 					<li>
 						<strong>Install Network Plugin:</strong>
 						<p>To verify, do:</p>
-						<pre>
-							<code>$ kubectl get node -n kube-system</code>
-						</pre>
+						<code>$ kubectl get node -n kube-system</code>
 						<p>
 							You’ll find that Coredns is in a pending state. I'm
 							using WeaveNet, but you can use any from the
@@ -165,31 +167,20 @@ function article_1() {
 					<li>
 						<strong>Join Worker Nodes:</strong>
 						<p>On Master:</p>
-						<pre>
-							<code>
-								$ kubeadm token create --print-join-command
-							</code>
-						</pre>
+						<code>$ kubeadm token create --print-join-command</code>
 						<p>Use the output on the worker node:</p>
-						<pre>
-							<code>
-								$ kubeadm join 192.168.154.199:6443 --token
-								h3xkkj.3i28no64egj2e3aj
-								--discovery-token-ca-cert-hash
-								sha256:0806303409a4960c160dc47f1c37b16204bdf2e20c4ce277ffc97bcc481545ae
-							</code>
-						</pre>
+						<code>
+							$ kubeadm join 192.168.154.199:6443 --token $token
+						</code>
 						<p>
 							Tip: Use <code>--help</code> to find the exact
 							command.
 						</p>
 						<p>To check that everything works fine:</p>
-						<pre>
-							<code>
-								$ kubectl exec -n kube-system weave-net-8nxlb -c
-								weave -- /home/weave/weave --local status
-							</code>
-						</pre>
+						<code>
+							$ kubectl exec -n kube-system weave-net-8nxlb -c
+							weave -- /home/weave/weave --local status
+						</code>
 					</li>
 				</ul>
 			</React.Fragment>
