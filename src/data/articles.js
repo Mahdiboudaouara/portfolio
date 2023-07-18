@@ -57,7 +57,7 @@ function article_1() {
 							Create a firewall and Edit inbound rules:
 						</strong>
 						<p>
-							Go to k8s documentation. Then you can associate the
+							You can find the inbound rules inside the kubernetes documentation. Then you can associate the
 							firewall to the appropriate node.
 						</p>
 						<img src={image1Url} alt="Firewall Setup" />
@@ -82,10 +82,11 @@ function article_1() {
 							check the service like this to know if it’s working
 							fine.
 						</p>
-						<img src={image3Url} alt="Kubernetes Components" />
+						
 						<pre>
 							<code>$ service kubelet status</code>
 						</pre>
+						<img src={image3Url} alt="Kubernetes Components" />
 					</li>
 					<li>
 						<strong>Initialize Master Node:</strong>
@@ -110,7 +111,7 @@ function article_1() {
 						</pre>
 						<p>
 							In case of an error (can happen when using a Ubuntu
-							version that's more than 21.04 with cgroupv2
+							version that's greater than 21.04 with cgroupv2
 							introduced), troubleshoot inside{" "}
 							<code>
 								/var/log/pods/kube-system_kube-apiserver-master_xxxx/kube-apiserver/x.log
