@@ -17,7 +17,7 @@ const INFO = {
 	homepage: {
 		title: "ICT Engineering Student, Currently looking for an end of studies internship.",
 		description:
-			"As a dedicated and hardworking individual, I am always seeking new challenges that enable me to utilize my skills and knowledge. With a passion for DevOps and security practices, I have developed a deep understanding of the principles and practices that underpin this field. I am committed to staying up-to-date with the latest technologies and methodologies, and am constantly looking for opportunities to expand my skill set and stay at the forefront of the industry.",
+			"As a dedicated and hardworking individual, I am always seeking new challenges that enable me to utilize my skills and knowledge. With a passion for DevOps and security practices, i take pride in my ability to achieve tasks and overcome difficulties in both individual and collaborative environments, I am committed to staying up-to-date with the latest technologies and methodologies, and am constantly looking for opportunities to expand my skill set and stay at the forefront of the industry.",
 	},
 
 	about: {
@@ -41,24 +41,41 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://github.com/Mahdiboudaouara",
 		},
-
+		{
+			title: "Kubernetes Security Toolkit",
+			description:
+				"As Kubernetes gains traction, strong security measures are crucial. Practices include image scanning (Trivy), RBAC for user management, network policies (Cilium), ISTIO for service mesh, mTLS for pod communication, HashiCorp Vault for secure secrets, encrypted ETCD, and automated backup (Kasten K10, Velero). Additionally, employ OPA and kyverno for security policies and Kasten K10 for disaster recovery.",
+			logo: "k8s-security.jpg",
+			linkText: "View Project",
+			link: "https://github.com/Mahdiboudaouara",
+		},
+		{
+			title: "IHEC Project",
+			description:
+				"A file management project, worked on it as a chef for team of 4, this project was made for students from IHEC carthage",
+			logo: "ihec.png",
+			linkText: "View Project",
+			link: "https://github.com/Mahdiboudaouara",
+		},
 		{
 			title: "Neurodata",
 			description:
 				"A website for a startup, worked on it with a team of 4 as a backend developper.",
 			logo: "neurodata.png",
 			linkText: "View Project",
-			link: "https://neurodata.tech/en/industries",
+			link: "https://www.groupeneurodata.com/en/industries",
+		},
+		{
+			title: "Invoice Generator",
+			description:
+				"An invoice generator for Sup'Com Junior Entreprise.",
+			logo: "Invoice.png",
+			linkText: "View Project",
+			link: "https://supcomje.tn/projects/invoice/login",
 		},
 
-		{
-			title: "IHEC Project",
-			description:
-				"A file management project, worked on it as a chef for team of 4 , this project was made for students from IHEC carthage",
-			logo: "ihec.png",
-			linkText: "View Project",
-			link: "https://github.com/Mahdiboudaouara",
-		},
+
+
 	],
 };
 

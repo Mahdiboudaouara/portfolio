@@ -20,10 +20,11 @@ const Works = () => {
 								className="work-image"
 							/>
 							<div className="work-title">Mercarue</div>
-							<div className="work-subtitle">
-								Backend Engineer
-							</div>
-							<div className="work-duration">Summer of 2022</div>
+
+							<div className="work-duration">Summer22</div>
+						</div>
+						<div className="work-subtitle">
+							Backend Engineer
 						</div>
 					</div>
 				}

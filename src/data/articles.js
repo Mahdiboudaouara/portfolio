@@ -90,7 +90,24 @@ function article_1() {
 							check the service like this to know if it’s working
 							fine.
 						</p>
-
+						<p>
+							Source:{" "}
+							<a
+								href="https://github.com/containerd/containerd/blob/main/docs/getting-started.md"
+								target="_blank"
+							>
+								Install containerd
+							</a>
+						</p>
+						<p>
+							Source:{" "}
+							<a
+								href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl"
+								target="_blank"
+							>
+								Installing kubeadm, kubelet and kubectl
+							</a>
+						</p>
 						<code>$ service kubelet status</code>
 						<img
 							className="randImage responsive"
